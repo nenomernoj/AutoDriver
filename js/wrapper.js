@@ -1,0 +1,32 @@
+if (!!localStorage.getItem('userName')) {
+    $("#userName").html(localStorage.getItem('userName'));
+}
+
+$("#exit").click(function() {
+    localStorage.clear();
+    location.reload();
+});
+
+
+$(document).ready(function($) {
+    loadMenu();
+});
+
+
+function loadMenu() {
+    $("#workSpace").load("menu.html");
+}
+
+$("#toMenu").click(function() {
+    loadMenu();
+});
+
+
+$(".nonStat").click(function() {
+    $(".nonStat,#nonStat").hide();
+});
+
+$("#goPromo").click(function(event) {
+   $("#workSpace").load("promo.html");
+   $(".nonStat,#nonStat").hide();
+});

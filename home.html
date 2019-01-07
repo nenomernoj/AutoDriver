@@ -1,0 +1,27 @@
+<div class="app"><img src="img/back.png" class="back_arrow">
+    <div class="login_form">
+        <img src="img/logo.png" width="75%" class="logo_main_page">
+        <form id="mainForm">
+            <input id="showLogin" type="button" class="defInput" value="Вход">
+            <input id="showReg" type="button" class="defInput actColor" value="Регистрация">
+        </form>
+        <form id="loginForm">
+            <input name="logLogin" type="text" class="defInput" placeholder="Логин" required="">
+            <input name="logPassword" type="password" class="defInput" placeholder="Пароль" required="">
+            <input id="doLogin" type="submit" class="defInput actColor" value="Войти">
+        </form>
+        <form id="regForm" onsubmit="return false">
+            <input name="regLogin" type="text" class="defInput" placeholder="Логин" required>
+            <input name="regName" type="text" class="defInput" placeholder="Имя" required>
+            <input name="regFam" type="text" class="defInput" placeholder="Фамилия" required>
+            <input name="regNumber" type="number" class="defInput" placeholder="Контактный телефон" required>
+            <input name="regPassword" type="password" class="defInput" placeholder="Придумайте пароль" pattern=".{3,}" required>
+            <select name="city" id="city" class="defInput">
+                <option value="0">Выберите город</option>
+            </select>
+            <input id="doRegister" type="submit" class="defInput actColor" value="Зарегистрироваться">
+        </form>
+        <div id="message"></div>
+    </div>
+</div>
+<script type="text/javascript" src="js/home.js"></script>
