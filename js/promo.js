@@ -1,5 +1,3 @@
-console.log('promo');
-
 
 $('#promoForm').on('submit', function(e) {
 	 e.preventDefault();

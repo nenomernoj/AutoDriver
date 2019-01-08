@@ -13,7 +13,6 @@ $("#test").click(function(event) {
     } else {
         alert('Ошибка');
     }
-
 });
 
 $("#contacts").click(function(event) {

@@ -18,7 +18,15 @@ function loadMenu() {
 }
 
 $("#toMenu").click(function() {
-    loadMenu();
+    switch (localStorage.getItem('indexMenu')) {
+      case 'mainMenu':
+      $("#workSpace").load("menu.html");
+        break;
+      case 'urokiMenu':
+      $("#workSpace").load("uroki.html");
+        break;
+      default:
+    }
 });
 
 

@@ -1,4 +1,5 @@
 $(document).ready(function($) {
+  localStorage.setItem('indexMenu','mainMenu');
     $("#loader").addClass('showLoader');
     $.post(baseUrl + 'lessons/getList.php').done(function(data) {
         $("#lessons").html('');
@@ -16,6 +17,7 @@ $(document).ready(function($) {
             $("#loader").removeClass('showLoader');
         });
         $("[idles]").click(function(event) {
+          localStorage.setItem('indexMenu','urokiMenu');
             $("#loader").addClass('showLoader');
             $("#lessons").hide();
             $("#lesson").show();
